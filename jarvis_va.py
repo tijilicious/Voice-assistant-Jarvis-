@@ -25,6 +25,7 @@ def takecommand():
         print(f"user said: {query}\n")
     except Exception as e:
         #print(e)
+        speak("say that again")
         print("say that again")
         return "None"
     return query
@@ -53,10 +54,12 @@ if True:
             speak("According to wikipedia")
             speak(results)
             print(results)
-        elif 'open youtube' or 'youtube kholde' in query:
+        elif 'open youtube' in query:
+            print(query)
             webbrowser.open("https://www.youtube.com/")
         
         elif 'good night' in query:
             speak("good night boss")
-            
+        elif ' ' in query:
+            speak("if there is nothing more to do then let me sleep boss")    
         #elif 
